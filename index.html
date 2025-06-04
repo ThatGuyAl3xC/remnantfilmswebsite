@@ -80,7 +80,7 @@
     }
     nav ul li a:hover {
       transform: scale(1.05);
-        color: brown;
+      color: brown;
     }
     .nav-button {
       background-color: gold;
@@ -105,19 +105,19 @@
       color: gold;
     }
     header p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin-top: 10px;
       padding: 5px 15px;
       border-radius: 8px;
     }
     .header-buttons {
-      margin-top: 20px;
+      margin-top: 40px;
       display: flex;
-      gap: 20px;
+      gap: 30px;
     }
     section {
       padding: 60px 20px;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
     }
     .services, .about, .contact {
@@ -128,11 +128,49 @@
       margin-bottom: 20px;
       color: gold;
     }
-    .service-item {
-      background: #1f1f1f;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
+    .service-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .service-card {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      padding: 30px;
+    }
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .service-content {
+      position: relative;
+      z-index: 2;
+      color: white;
+      max-width: 600px;
+    }
+    .service-subtitle {
+      font-size: 1rem;
+      color: gold;
+      margin-bottom: 5px;
+      margin-left: 5px;
+    }
+    .service-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .service-description {
+      font-size: 1rem;
+      line-height: 1.6;
     }
     footer {
       background: #111;
@@ -160,9 +198,7 @@
             <li><a href="#">SHOP</a></li>
           </ul>
         </div>
-        <div class="nav-right">
-          <!-- Removed buttons from nav -->
-        </div>
+        <div class="nav-right"></div>
       </div>
     </nav>
     <h2>Remnant Films & Customs</h2>
@@ -175,17 +211,34 @@
 
   <section class="services">
     <h2>Our Services</h2>
-    <div class="service-item">
-      <h3>Window Tinting</h3>
-      <p>High-quality film with heat rejection and privacy.</p>
-    </div>
-    <div class="service-item">
-      <h3>Paint Protection Film (PPF)</h3>
-      <p>Shield your paint with durable, clear protection.</p>
-    </div>
-    <div class="service-item">
-      <h3>Vinyl Wraps</h3>
-      <p>Transform your vehicle with custom color wraps and designs.</p>
+    <div class="service-container">
+      <div class="service-card" style="background-image: url("Truck_Angle2.jpg");">
+        <div class="service-content">
+          <div class="service-subtitle">Remnant F&amp;S</div>
+          <div class="service-title">Window Tinting</div>
+          <div class="service-description">
+            Enhance your privacy, comfort, and style with our professional window tinting. We offer a variety of premium films that block UV rays, reduce glare, and improve your vehicle's aesthetic.
+          </div>
+        </div>
+      </div>
+      <div class="service-card" style="background-image: url("Truck_Angle2.jpg");">
+        <div class="service-content">
+          <div class="service-subtitle">Remnant F&amp;S</div>
+          <div class="service-title">Paint Protection Film (PPF)</div>
+          <div class="service-description">
+            Our top-tier paint protection film shields your car from rock chips, scratches, and contaminants. Enjoy a clear, long-lasting barrier that maintains your car’s showroom finish.
+          </div>
+        </div>
+      </div>
+      <div class="service-card" style="background-image: url("Truck_Angle2.jpg");">
+        <div class="service-content">
+          <div class="service-subtitle">Remnant F&amp;S</div>
+          <div class="service-title">Vinyl Wraps</div>
+          <div class="service-description">
+            Give your vehicle a whole new look with our custom vinyl wraps. Choose from hundreds of colors, textures, and finishes to match your personal style and brand.
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
