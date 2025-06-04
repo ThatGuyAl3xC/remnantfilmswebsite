@@ -135,8 +135,6 @@
     }
     .service-card {
       position: relative;
-      background-size: cover;
-      background-position: center;
       height: 300px;
       border-radius: 15px;
       overflow: hidden;
@@ -171,6 +169,15 @@
     .service-description {
       font-size: 1rem;
       line-height: 1.6;
+    }
+    .service-card img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
     }
     footer {
       background: #111;
@@ -213,7 +220,7 @@
     <h2>Our Services</h2>
     <div class="service-container">
       <div class="service-card">
-        <img src="Truck_Angle2" alt="Tint Image" class="img">
+        <img src="Truck_Angle2.jpg" alt="Window Tinting">
         <div class="service-content">
           <div class="service-subtitle">Remnant F&amp;S</div>
           <div class="service-title">Window Tinting</div>
@@ -222,7 +229,8 @@
           </div>
         </div>
       </div>
-      <div class="service-card" style="background-image: url("Truck_Angle2.jpg");">
+      <div class="service-card">
+        <img src="Truck_Angle2.jpg" alt="Paint Protection Film">
         <div class="service-content">
           <div class="service-subtitle">Remnant F&amp;S</div>
           <div class="service-title">Paint Protection Film (PPF)</div>
@@ -231,7 +239,8 @@
           </div>
         </div>
       </div>
-      <div class="service-card" style="background-image: url("Truck_Angle2.jpg");">
+      <div class="service-card">
+        <img src="Truck_Angle2.jpg" alt="Vinyl Wraps">
         <div class="service-content">
           <div class="service-subtitle">Remnant F&amp;S</div>
           <div class="service-title">Vinyl Wraps</div>
