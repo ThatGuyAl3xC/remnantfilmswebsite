@@ -124,7 +124,6 @@
       text-align: center;
       margin-bottom: 40px;
     }
-
     .section-intro h2 {
       font-size: 2.5rem;
       color: gold;
@@ -133,7 +132,6 @@
       letter-spacing: 1px;
       margin-bottom: 10px;
     }
-    
     .section-intro p {
       font-size: 1rem;
       color: #f0f0f0;
@@ -141,7 +139,6 @@
       font-style: italic;
       letter-spacing: 0.5px;
     }
-
     h2 {
       font-size: 2rem;
       margin-bottom: 20px;
@@ -207,42 +204,39 @@
     .service-card:hover img {
       transform: scale(1.05);
     }
-    .split-section {
-      display: flex;
-      flex-direction: row;
+    .video-card {
+      position: relative;
       height: 600px;
-      margin-bottom: 20px;
-      position: relative;
+      margin: 40px auto;
+      border-radius: 15px;
       overflow: hidden;
-    }
-    .split-section .video-container {
-      flex: 1;
-      position: relative;
-      clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-      overflow: hidden;
-    }
-    .split-section video {
-      width: 100%;
-      height: 110%;
-      object-fit: cover;
-    }
-    .split-section .text-container {
-      flex: 1;
-      background: linear-gradient(150deg, #000000, #aaaaaa75, #000);
-      padding: 50px 40px;
       display: flex;
-      justify-content: center;
       align-items: center;
-      text-align: center;
+      justify-content: center;
       color: white;
-      clip-path: polygon(0% 0, 100% 0, 90% 100%, 0% 100%);
+      text-align: center;
     }
-    .split-section .text-container p {
-      font-size: 1.2rem;
+    .video-card video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .video-card .overlay {
+      position: relative;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      max-width: 700px;
+      border-radius: 15px;
+    }
+    .video-card .overlay p {
+      font-size: 1.3rem;
       font-weight: 600;
       line-height: 1.6;
-      color: #f0f0f0;
-      max-width: 500px;
     }
     footer {
       background: #111;
@@ -254,145 +248,33 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="header-background"></div>
-    <nav>
-      <div class="nav-container">
-        <div class="nav-left">
-          <img src="logo.jpg" alt="Remnant Logo" class="logo">
-        </div>
-        <div class="nav-center">
-          <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">BOOK ONLINE</a></li>
-            <li><a href="#">PORTFOLIO</a></li>
-            <li><a href="#">CONTACT</a></li>
-            <li><a href="#">SHOP</a></li>
-          </ul>
-        </div>
-        <div class="nav-right"></div>
-      </div>
-    </nav>
-    <h2>Remnant Films & Customs</h2>
-    <p>Precision Tinting, Wraps & Protection</p>
-    <div class="header-buttons">
-      <a href="#" class="nav-button">Contact Us</a>
-      <a href="#" class="nav-button">Book Now</a>
-    </div>
-  </header>
-
-  <section class="services">
-    <div class="section-intro">
-      <h2>Our Services</h2>
-      <p>Expert protection and personalization for every ride.</p>
-    </div>
-    <div class="service-container">
-      <div class="service-card">
-        <img src="Truck_Angle2.jpg" alt="Window Tinting">
-        <div class="service-content">
-          <div class="service-subtitle">Remnant F&amp;S</div>
-          <div class="service-title">Window Tinting</div>
-          <div class="service-description">
-            Enhance your privacy, comfort, and style with our professional window tinting. We offer a variety of premium films that block UV rays, reduce glare, and improve your vehicle's aesthetic.
-          </div>
-        </div>
-      </div>
-      <div class="service-card">
-        <img src="Truck_Angle2.jpg" alt="Paint Protection Film">
-        <div class="service-content">
-          <div class="service-subtitle">Remnant F&amp;S</div>
-          <div class="service-title">Paint Protection Film (PPF)</div>
-          <div class="service-description">
-            Our top-tier paint protection film shields your car from rock chips, scratches, and contaminants. Enjoy a clear, long-lasting barrier that maintains your car’s showroom finish.
-          </div>
-        </div>
-      </div>
-      <div class="service-card">
-        <img src="Truck_Angle2.jpg" alt="Vinyl Wraps">
-        <div class="service-content">
-          <div class="service-subtitle">Remnant F&amp;S</div>
-          <div class="service-title">Vinyl Wraps</div>
-          <div class="service-description">
-            Give your vehicle a whole new look with our custom vinyl wraps. Choose from hundreds of colors, textures, and finishes to match your personal style and brand.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- previous content unchanged -->
 
   <section class="about">
     <div class="section-intro">
       <h2>About Us</h2>
       <p>Passionate professionals driven by quality and detail.</p>
     </div>
-    <section class="split-section">
-      <div class="video-container">
-        <video autoplay muted loop playsinline>
-          <source src="CarRecordTrim.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-    </div>
-    <div class="text-container">
-      <p>We’re a team of certified experts passionate about making vehicles look and stay pristine. With over 10 years of experience, we guarantee professional results with every project.</p>
-    </div>
-  </section>
-  <section class="split-section">
-    <div class="text-container">
-      <p>We’re a team of certified experts passionate about making vehicles look and stay pristine. With over 10 years of experience, we guarantee professional results with every project.</p>
-    </div>
-    <div class="video-container">
-        <video autoplay muted loop playsinline>
-          <source src="HomeTintTRIM.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-    </div>
-  </section>
-  <footer>
-    <section class="contact" style="background: #000; padding: 60px 20px; color: #f0f0f0;">
-      <div style="max-width: 1000px; margin: auto; text-align: center;">
-        <!-- Logo -->
-        <img src="logo2.jpg" alt="Remnant Logo" style="height: 100px; margin-bottom: 20px;">
-    
-        <!-- Heading -->
-        <h2 style="color: gold; font-style: italic; margin-bottom: 10px;">Contact Us</h2>
-    
-        <!-- Contact Info -->
-        <p style="font-size: 1.1rem; margin: 10px 0;">Phone: <a href="tel:8182007719" style="color: gold; text-decoration: none;">(818) 200-7719</a></p>
-        <p style="font-size: 1.1rem; margin: 10px 0;">Email: <a href="mailto:info@remnantcustoms.com" style="color: gold; text-decoration: none;">info@remnantcustoms.com</a></p>
-    
-        <!-- Hours -->
-        <h3 style="margin-top: 30px; font-style: italic; color: gold;">Business Hours</h3>
-        <p>Monday-Friday: 9:00 AM - 5:30 PM</p>
-        <p>Saturday: 9:00 AM - 3:00 PM</p>
-        <p>Sunday: CLOSED</p>
-    
-        <!-- Address -->
-        <h3 style="margin-top: 30px; font-style: italic; color: gold;">Address</h3>
-        <p>8708 Cleta St, Downey, CA 90241</p>
-    
-        <!-- Map -->
-        <div style="margin: 20px auto; max-width: 400px;">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.3758006414796!2d-118.13163132545526!3d33.931461324100276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2cd7611dcfe1d%3A0x81852ca6247641f1!2s8708%20Cleta%20St%2C%20Downey%2C%20CA%2090241!5e0!3m2!1sen!2sus!4v1749103301952!5m2!1sen!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            width="100%" height="250" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy">
-          </iframe>
-        </div>
-    
-        <!-- Social Media Icons -->
-        <h3 style="margin-top: 30px; font-style: italic; color: gold;">Follow Us!</h3>
-        <div style="margin-top: 30px;">
-          <a href="https://instagram.com" target="_blank" style="margin: 0 10px;">
-            <img src="insta_icon.png" alt="Instagram" style="height: 30px;">
-          </a>
-        </div>
-    
-        <!-- Quote Placeholder -->
-        <blockquote style="margin-top: 30px; font-style: italic; color: #ccc;">“Your inspirational Bible quote here.”</blockquote>
-    
-        <!-- Closing Statement -->
-        <p style="margin-top: 30px; font-weight: bold; font-size: 1.1rem;">Thank you for choosing Remnant Films & Customs — where craftsmanship meets conviction.</p>
+    <div class="video-card">
+      <video autoplay muted loop playsinline>
+        <source src="CarRecordTrim.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay">
+        <p>We’re a team of certified experts passionate about making vehicles look and stay pristine. With over 10 years of experience, we guarantee professional results with every project.</p>
       </div>
-    </section>
-  </footer>
+    </div>
+    <div class="video-card">
+      <video autoplay muted loop playsinline>
+        <source src="HomeTintTRIM.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay">
+        <p>We’re a team of certified experts passionate about making vehicles look and stay pristine. With over 10 years of experience, we guarantee professional results with every project.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- rest of your page -->
 </body>
 </html>
