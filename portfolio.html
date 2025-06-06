@@ -44,6 +44,22 @@
       justify-content: space-between;
       z-index: 3;
     }
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 91%;
+    }
+    .nav-left, .nav-center, {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .nav-center {
+      flex: 1;
+      justify-content: center;
+      padding: 10px
+    }
     nav .logo {
       height: 120px;
     }
@@ -62,16 +78,7 @@
       transform: scale(1.05);
       color: brown;
     }
-    .nav-left, .nav-center, {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .nav-center {
-      flex: 1;
-      justify-content: center;
-      padding: 10px
-    }
+
     .section-intro {
       text-align: center;
       margin: 40px 20px 60px;
@@ -194,17 +201,19 @@
   <header>
     <div class="header-background"></div>
     <nav>
+      <div class="nav-container">
       <div class="nav-left">
         <img href="index.html" src="logo.jpg"  class="logo" alt="Remnant Logo"  />
       </div>
-      <div class="nav-center">
-      <ul>
-        <li><a href="index.html">HOME</li>
-        <li><a href="portfolio.html">PORTFOLIO</a></li>
-        <li><a href="#">BOOK ONLINE</a></li>
-        <li><a href="#">CONTACT</a></li>
-        <li><a href="#">SHOP</a></li>
-      </ul>
+        <div class="nav-center">
+          <ul>
+            <li><a href="index.html">HOME</li>
+            <li><a href="portfolio.html">PORTFOLIO</a></li>
+            <li><a href="#">BOOK ONLINE</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">SHOP</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
   </header>
