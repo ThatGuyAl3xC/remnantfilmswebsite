@@ -90,16 +90,13 @@
     .carousel {
       display: flex;
       transition: transform 0.5s ease-in-out;
+      will-change: transform;
     }
     
     .carousel-slide {
       min-width: 100%;
-      display: none;
+      flex-shrink: 0;
       border-radius: 10px;
-    }
-    
-    .carousel-slide.active {
-      display: block;
     }
     
     .carousel-btn {
@@ -159,7 +156,7 @@
   <div class="carousel-wrapper">
     <button class="carousel-btn left" onclick="prevSlide()">&#10094;</button>
     <div class="carousel">
-      <img src="Truck_Angle1.jpg" alt="Before 1" class="carousel-slide active">
+      <img src="Truck_Angle1.jpg" alt="Before 1" class="carousel-slide">
       <img src="Truck_Angle2.jpg" alt="After 1" class="carousel-slide">
       <img src="Truck_Angle1.jpg" alt="Before 2" class="carousel-slide">
       <img src="Truck_Angle2.jpg" alt="After 2" class="carousel-slide">
@@ -184,34 +181,29 @@
 </body>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      let currentIndex = 0;
+      const carousel = document.querySelector('.carousel');
       const slides = document.querySelectorAll('.carousel-slide');
+      let currentIndex = 0;
   
-      function showSlide(index) {
-        slides.forEach((slide, i) => {
-          slide.classList.remove('active');
-          if (i === index) {
-            slide.classList.add('active');
-          }
-        });
+      function updateCarousel() {
+        const offset = -currentIndex * 100;
+        carousel.style.transform = `translateX(${offset}%)`;
       }
   
       function nextSlide() {
         currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
+        updateCarousel();
       }
   
       function prevSlide() {
         currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        showSlide(currentIndex);
+        updateCarousel();
       }
   
-      // Attach handlers to buttons
       document.querySelector('.carousel-btn.left').addEventListener('click', prevSlide);
       document.querySelector('.carousel-btn.right').addEventListener('click', nextSlide);
   
-      // Initialize
-      showSlide(currentIndex);
+      updateCarousel(); // initialize position
     });
   </script>
 </html>
