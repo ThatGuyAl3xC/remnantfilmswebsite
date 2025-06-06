@@ -164,6 +164,47 @@
       opacity: 1;
     }
 
+    .before-after-pair {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .before-after-item {
+      position: relative;
+      max-width: 400px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 10px gold;
+      transition: transform 0.3s ease;
+    }
+    
+    .before-after-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+    
+    .before-after-item:hover {
+      transform: scale(1.05);
+    }
+    
+    .before-after-item .img-caption {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: rgba(0, 0, 0, 0.65);
+      color: gold;
+      padding: 5px 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 6px;
+      opacity: 1; /* Always visible */
+    }
+
     footer {
       text-align: center;
       background: #111;
@@ -292,6 +333,18 @@
     <div class="gallery-item">
       <img src="Truck_Angle1.jpg" alt="Wrap Finish" />
       <div class="img-caption">2023 Toyota Tundra</div>
+    </div>
+    
+    <!-- Before and After Comparison -->
+    <div class="before-after-pair">
+      <div class="before-after-item">
+        <img src="Truck_Angle1.jpg" alt="Before Wrap">
+        <div class="img-caption">Before</div>
+      </div>
+      <div class="before-after-item">
+        <img src="Truck_Angle2.jpg" alt="After Wrap">
+        <div class="img-caption">After</div>
+      </div>
     </div>
   </div>
 
