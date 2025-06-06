@@ -40,8 +40,9 @@
       width: 100%;
       background-color: rgba(0, 0, 0, 0.8);
       display: flex;
+      justify-center: center;
       align-items: center;
-      justify-content: space-between;
+      text-align: left;
       z-index: 3;
     }
     .nav-container {
@@ -57,7 +58,8 @@
     }
     .nav-center {
       flex: 1;
-      justify-content: center;
+      display: flex;
+      justify-content: flex-end;
       padding: 10px
     }
     nav .logo {
@@ -203,11 +205,13 @@
     <nav>
       <div class="nav-container">
       <div class="nav-left">
-        <img href="index.html" src="logo.jpg"  class="logo" alt="Remnant Logo"  />
+        <a href="index.html">
+          <img src="logo.jpg"  class="logo" alt="Remnant Logo"  />
+        </a>
       </div>
         <div class="nav-center">
           <ul>
-            <li><a href="index.html">HOME</li>
+            <li><a href="index.html">HOME</a></li>
             <li><a href="portfolio.html">PORTFOLIO</a></li>
             <li><a href="#">BOOK ONLINE</a></li>
             <li><a href="#">CONTACT</a></li>
