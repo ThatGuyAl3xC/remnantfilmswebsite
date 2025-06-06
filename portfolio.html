@@ -79,15 +79,56 @@
       padding: 30px 20px;
       font-size: 0.9rem;
     }
+    .carousel-wrapper {
+      position: relative;
+      width: 90%;
+      max-width: 700px;
+      margin: 0 auto 60px;
+      overflow: hidden;
+    }
+    
     .carousel {
       display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      gap: 10px;
-      margin-bottom: 40px;
-      padding: 0 20px;
+      transition: transform 0.5s ease-in-out;
     }
-
+    
+    .carousel-slide {
+      min-width: 100%;
+      display: none;
+      border-radius: 10px;
+    }
+    
+    .carousel-slide.active {
+      display: block;
+    }
+    
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.6);
+      border: none;
+      color: gold;
+      font-size: 2rem;
+      padding: 10px 16px;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 8px;
+    }
+    
+    .carousel-btn.left {
+      left: 10px;
+    }
+    
+    .carousel-btn.right {
+      right: 10px;
+    }
+    
+    .carousel-btn:hover {
+      background-color: rgba(255, 215, 0, 0.8);
+      color: black;
+    }
+    
     .carousel img {
       scroll-snap-align: start;
       width: 90%;
@@ -96,6 +137,32 @@
     }
   </style>
 </head>
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+  
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+          slide.classList.add('active');
+        }
+      });
+    }
+  
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+  
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    }
+  
+    // Initialize
+    showSlide(currentIndex);
+  </script>
 <body>
 
   <nav>
@@ -115,12 +182,17 @@
   </section>
 
   <!-- Carousel section -->
-  <div class="carousel">
-    <img src="Truck_Angle1.jpg" alt="Before 1">
-    <img src="Truck_Angle2.jpg" alt="After 1">
-    <img src="Truck_Angle1.jpg" alt="Before 2">
-    <img src="Truck_Angle2.jpg" alt="After 2">
+  <div class="carousel-wrapper">
+    <button class="carousel-btn left" onclick="prevSlide()">&#10094;</button>
+    <div class="carousel">
+      <img src="Truck_Angle1.jpg" alt="Before 1" class="carousel-slide active">
+      <img src="Truck_Angle2.jpg" alt="After 1" class="carousel-slide">
+      <img src="Truck_Angle1.jpg" alt="Before 2" class="carousel-slide">
+      <img src="Truck_Angle2.jpg" alt="After 2" class="carousel-slide">
+    </div>
+    <button class="carousel-btn right" onclick="nextSlide()">&#10095;</button>
   </div>
+
 
   <!-- Static image gallery -->
   <div class="gallery">
