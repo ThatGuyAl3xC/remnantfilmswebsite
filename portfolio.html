@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Remnant Films & Customs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #f0f0f0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    nav {
+      background-color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+    }
+    .logo {
+      height: 80px;
+    }
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: gold;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      color: brown;
+    }
+
+    .section-intro {
+      text-align: center;
+      margin: 40px 20px 60px;
+    }
+
+    .section-intro h2 {
+      font-size: 2.5rem;
+      color: gold;
+      font-style: italic;
+    }
+
+    .section-intro p {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #ddd;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 20px 60px;
+    }
+
+    .gallery img {
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px gold;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      background: #111;
+      color: #aaa;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      color: gold;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 10px;
+      margin-bottom: 40px;
+      padding: 0 20px;
+    }
+
+    .carousel img {
+      scroll-snap-align: start;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <img src="logo.jpg" class="logo" alt="Remnant Logo" />
+    <ul>
+      <li><a href="index.html" class="back-link">HOME</li>
+      <li><a href="portfolio.html">PORTFOLIO</a></li>
+      <li><a href="#">BOOK ONLINE</a></li>
+      <li><a href="#">CONTACT</a></li>
+      <li><a href="#">SHOP</a></li>
+    </ul>
+  </nav>
+
+  <section class="section-intro">
+    <h2>Our Gallery</h2>
+    <p>Showcasing real work from real clients – before and after the Remnant treatment.</p>
+  </section>
+
+  <!-- Carousel section -->
+  <div class="carousel">
+    <img src="before1.jpg" alt="Before 1">
+    <img src="after1.jpg" alt="After 1">
+    <img src="before2.jpg" alt="Before 2">
+    <img src="after2.jpg" alt="After 2">
+  </div>
+
+  <!-- Static image gallery -->
+  <div class="gallery">
+    <img src="truck_custom1.jpg" alt="Custom Wrap 1" />
+    <img src="window_tint2.jpg" alt="Window Tint 2" />
+    <img src="ppf_install.jpg" alt="PPF Install" />
+    <img src="wrap_finish.jpg" alt="Wrap Finish" />
+  </div>
+
+  <footer>
+    &copy; 2025 Remnant Films & Customs. All rights reserved.
+    <br/>
+  </footer>
+
+</body>
+</html>
