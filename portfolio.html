@@ -132,6 +132,38 @@
       transform: scale(1.05);
     }
 
+    .gallery-item {
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+    
+    .gallery-item img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+    
+    .img-caption {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: rgba(0, 0, 0, 0.65);
+      color: gold;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .gallery-item:hover .img-caption {
+      opacity: 1;
+    }
+
     footer {
       text-align: center;
       background: #111;
@@ -245,11 +277,24 @@
 
   <!-- Static image gallery -->
   <div class="gallery">
-    <img src="Truck_Angle1.jpg" alt="Custom Wrap 1" />
-    <img src="Truck_Angle1.jpg" alt="Window Tint 2" />
-    <img src="Truck_Angle1.jpg" alt="PPF Install" />
-    <img src="Truck_Angle1.jpg" alt="Wrap Finish" />
+    <div class="gallery-item">
+      <img src="Truck_Angle1.jpg" alt="Custom Wrap 1" />
+      <div class="img-caption">2022 Ford F-150</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Truck_Angle1.jpg" alt="Window Tint 2" />
+      <div class="img-caption">2020 Chevy Silverado</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Truck_Angle1.jpg" alt="PPF Install" />
+      <div class="img-caption">2018 Dodge Ram 1500</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Truck_Angle1.jpg" alt="Wrap Finish" />
+      <div class="img-caption">2023 Toyota Tundra</div>
+    </div>
   </div>
+
 
     <!-- Carousel section -->
   <div class="carousel-wrapper">
