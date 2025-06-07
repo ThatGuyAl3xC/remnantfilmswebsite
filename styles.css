@@ -289,6 +289,8 @@ a.service-card {
   align-items: center;
   padding: 30px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-decoration: none;
+  color: inherit;
 }
 a.service-card:hover {
   transform: scale(1.02);
