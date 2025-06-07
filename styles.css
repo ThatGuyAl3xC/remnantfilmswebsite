@@ -280,7 +280,7 @@ h2 {
   gap: 40px;
   padding: 40px 0px 0px 0;
 }
-.service-card {
+a.service-card {
   position: relative;
   height: 300px;
   border-radius: 15px;
@@ -290,11 +290,11 @@ h2 {
   padding: 30px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-.service-card:hover {
+a.service-card:hover {
   transform: scale(1.02);
   box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
 }
-.service-card::before {
+a.service-card::before {
   content: "";
   position: absolute;
   inset: 0;
