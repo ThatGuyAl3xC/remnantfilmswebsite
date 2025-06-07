@@ -113,6 +113,13 @@
       q.addEventListener("click", () => {
         const item = q.parentElement;
         item.classList.toggle("active");
+  
+        // Optionally collapse others
+        document.querySelectorAll(".faq-item").forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove("active");
+          }
+        });
       });
     });
   </script>
