@@ -79,7 +79,7 @@
 
     <!-- Carousel section -->
   <div class="carousel-wrapper">
-    <button class="carousel-btn left" onclick="prevSlide()">&#10094;</button>
+    <button class="carousel-btn left">&#10094;</button>
     <div class="carousel">
       <img src="Truck_Angle1.jpg" alt="Before 1" class="carousel-slide">
       <img src="Truck_Angle2.jpg" alt="After 1" class="carousel-slide">
@@ -88,7 +88,7 @@
       <img src="Truck_Angle1.jpg" alt="Before 3" class="carousel-slide">
       <img src="Truck_Angle2.jpg" alt="After 3" class="carousel-slide">
     </div>
-    <button class="carousel-btn right" onclick="nextSlide()">&#10095;</button>
+    <button class="carousel-btn right">&#10095;</button>
 
     <!-- Dots/Indicators -->
     <div class="carousel-indicators"></div>
@@ -190,6 +190,10 @@
   
       updateCarousel(); // initialize
       startAutoplay();  // autoplay starts
+
+      window.onerror = function (message, source, lineno, colno, error) {
+        alert(`Error: ${message} at ${source}:${lineno}:${colno}`);
+      };
     });
   </script>
 </html>
