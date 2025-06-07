@@ -82,6 +82,47 @@
       transform: scale(1.05);
       color: brown;
     }
+    /* Dropdown Styles */
+    .dropdown {
+      position: relative;
+    }
+    
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.95);
+      list-style: none;
+      padding: 10px 0;
+      display: none;
+      flex-direction: column;
+      min-width: 200px;
+      z-index: 999;
+      border-radius: 5px;
+    }
+    
+    .dropdown-menu li {
+      width: 100%;
+      text-align: left;
+    }
+    
+    .dropdown-menu li a {
+      display: block;
+      padding: 10px 20px;
+      color: gold;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .dropdown-menu li a:hover {
+      background-color: gold;
+      color: black;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+      display: flex;
+    }
+
     .nav-button {
       background-color: gold;
       color: black;
@@ -268,8 +309,15 @@
             <li><a href="index.html">HOME</a></li>
             <li><a href="#">BOOK ONLINE</a></li>
             <li><a href="portfolio.html">PORTFOLIO</a></li>
+            <li class="dropdown">
+              <a href="#">SERVICES ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="window-tinting.html">Window Tinting</a></li>
+                <li><a href="paint-protection.html">Paint Protection Film</a></li>
+                <li><a href="vinyl-wraps.html">Vinyl Wraps</a></li>
+              </ul>
+            </li>
             <li><a href="contact.html">CONTACT</a></li>
-            <li><a href="#">SHOP</a></li>
           </ul>
         </div>
       </div>
