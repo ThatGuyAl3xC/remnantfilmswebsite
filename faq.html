@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ | Remnant Films & Customs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .faq-container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      border: 1px solid #444;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #111;
+    }
+
+    .faq-question {
+      background-color: #222;
+      color: gold;
+      cursor: pointer;
+      padding: 15px 20px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 15px 20px;
+      background-color: #1a1a1a;
+      color: #eee;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .faq-question::after {
+      content: " ▲";
+    }
+
+    .faq-question::after {
+      content: " ▼";
+      float: right;
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-background"></div>
+    <nav>
+      <div class="nav-container">
+        <div class="nav-left">
+          <a href="index.html">
+            <img src="logo.jpg" class="logo" alt="Remnant Logo" />
+          </a>
+        </div>
+        <div class="nav-center">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#">BOOK ONLINE</a></li>
+            <li class="dropdown">
+              <a href="#">SERVICES ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="window-tinting.html">Window Tinting</a></li>
+                <li><a href="paint-protection.html">Paint Protection Film</a></li>
+                <li><a href="vinyl-wraps.html">Vinyl Wraps</a></li>
+              </ul>
+            </li>
+            <li><a href="portfolio.html">PORTFOLIO</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h2>Frequently Asked Questions</h2>
+    <p>Answers to common questions about tinting, wrapping, and more.</p>
+  </header>
+
+  <section class="faq-container">
+    <div class="faq-item">
+      <div class="faq-question">How long does window tint take to install?</div>
+      <div class="faq-answer">Most standard vehicles take about 2–3 hours to tint. Time may vary depending on the number of windows and the complexity of the job.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Is window tint legal in California?</div>
+      <div class="faq-answer">Yes, but California law restricts tint darkness on the front side windows. We always comply with state regulations and offer legal options.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How long will my vinyl wrap last?</div>
+      <div class="faq-answer">A high-quality vinyl wrap can last 5–7 years with proper care. Factors like sun exposure, washing habits, and parking conditions can affect lifespan.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can I take my car through a car wash after tinting or wrapping?</div>
+      <div class="faq-answer">After tinting, wait 3–5 days before washing. For wraps, avoid high-pressure washes and harsh chemicals to prolong the material’s life.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Do you offer warranties for your services?</div>
+      <div class="faq-answer">Yes. We offer manufacturer warranties on tint and vinyl, and our work is backed by a satisfaction guarantee. Specific terms depend on the product.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can a vinyl wrap damage my paint?</div>
+      <div class="faq-answer">No, as long as your paint is in good condition. In fact, wraps can protect your original paint from scratches and sun damage.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How do I maintain my tint or wrap?</div>
+      <div class="faq-answer">Use gentle, ammonia-free cleaners and soft cloths. Avoid scraping or pressure washing. We'll give you care tips when your job is done.</div>
+    </div>
+  </section>
+
+  <footer>
+    <section class="contact" style="background: #000; padding: 60px 20px; color: #f0f0f0;">
+      <div style="max-width: 1000px; margin: auto; text-align: center;">
+        <img src="logo2.jpg" alt="Remnant Logo" style="height: 100px; margin-bottom: 20px;">
+        <h2 style="color: gold; font-style: italic; margin-bottom: 10px;">Contact Us</h2>
+        <p style="font-size: 1.1rem; margin: 10px 0;">Phone: <a href="tel:8182007719" style="color: gold; text-decoration: none;">(818) 200-7719</a></p>
+        <p style="font-size: 1.1rem; margin: 10px 0;">Email: <a href="mailto:info@remnantcustoms.com" style="color: gold; text-decoration: none;">info@remnantcustoms.com</a></p>
+        <h3 style="margin-top: 30px; font-style: italic; color: gold;">Business Hours</h3>
+        <p>Monday-Friday: 9:00 AM - 5:30 PM</p>
+        <p>Saturday: 9:00 AM - 3:00 PM</p>
+        <p>Sunday: CLOSED</p>
+        <h3 style="margin-top: 30px; font-style: italic; color: gold;">Address</h3>
+        <p>8708 Cleta St, Downey, CA 90241</p>
+        <div style="margin: 20px auto; max-width: 400px;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.3758006414796!2d-118.13163132545526!3d33.931461324100276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2cd7611dcfe1d%3A0x81852ca6247641f1!2s8708%20Cleta%20St%2C%20Downey%2C%20CA%2090241!5e0!3m2!1sen!2sus!4v1749103301952!5m2!1sen!2sus"
+            width="100%" height="250" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+        <h3 style="margin-top: 30px; font-style: italic; color: gold;">Follow Us!</h3>
+        <div style="margin-top: 30px;">
+          <a href="https://instagram.com" target="_blank" style="margin: 0 10px;">
+            <img src="insta_icon.png" alt="Instagram" style="height: 30px;">
+          </a>
+        </div>
+        <blockquote style="margin-top: 30px; font-style: italic; color: #ccc;">“Your inspirational Bible quote here.”</blockquote>
+        <p style="margin-top: 30px; font-weight: bold; font-size: 1.1rem;">Thank you for choosing Remnant Films & Customs — where craftsmanship meets conviction.</p>
+      </div>
+    </section>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".faq-question").forEach(q => {
+      q.addEventListener("click", () => {
+        const item = q.parentElement;
+        item.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+</html>
