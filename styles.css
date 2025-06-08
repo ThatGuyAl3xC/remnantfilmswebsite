@@ -198,7 +198,6 @@ section {
 .gallery-item {
   position: relative;
   display: inline-block;
-  overflow: hidden;
   border-radius: 12px;
 }
 
