@@ -180,13 +180,13 @@ section {
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   gap: 20px;
   padding: 0 20px 60px;
 }
 
 .gallery img {
-  max-width: 400px;
+  max-width: 480px;
   border-radius: 12px;
   box-shadow: 0 0 10px gold;
   transition: transform 0.3s ease;
@@ -198,6 +198,8 @@ section {
 
 .gallery-item {
   position: relative;
+  max-width: 480px;
+  flex: 1 1 480px;
   display: inline-block;
   overflow: hidden;
   border-radius: 12px;
