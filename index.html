@@ -8,34 +8,35 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+    <nav>
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html">
+          <img src="logo.jpg"  class="logo" alt="Remnant Logo" />
+        </a>
+      </div>
+      <div class="nav-toggle" id="navToggle">&#9776;</div> <!-- Burger Icon -->
+      <div class="nav-center" id="navMenu">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="book-online.html">BOOK ONLINE</a></li>
+          <li class="dropdown">
+            <a href="#">SERVICES ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="window-tinting.html">Window Tinting</a></li>
+              <li><a href="paint-protection.html">Paint Protection Film</a></li>
+              <li><a href="vinyl-wraps.html">Vinyl Wraps</a></li>
+            </ul>
+          </li>
+          <li><a href="portfolio.html">PORTFOLIO</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <header>
     <div class="header-background"></div>
-    <nav>
-      <div class="nav-container">
-        <div class="nav-left">
-          <a href="index.html">
-            <img src="logo.jpg"  class="logo" alt="Remnant Logo" />
-          </a>
-        </div>
-        <div class="nav-center">
-          <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="#">BOOK ONLINE</a></li>
-            <li class="dropdown">
-              <a href="#">SERVICES ▾</a>
-              <ul class="dropdown-menu">
-                <li><a href="window-tinting.html">Window Tinting</a></li>
-                <li><a href="paint-protection.html">Paint Protection Film</a></li>
-                <li><a href="vinyl-wraps.html">Vinyl Wraps</a></li>
-              </ul>
-            </li>
-            <li><a href="portfolio.html">PORTFOLIO</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
     <h2>Remnant Films & Customs</h2>
     <p>Precision Tinting, Wraps & Protection</p>
     <div class="header-buttons">
@@ -43,6 +44,7 @@
       <a href="#" class="nav-button">Book Now</a>
     </div>
   </header>
+
 
   <section class="services">
     <div class="section-intro">
@@ -158,5 +160,16 @@
       </div>
     </section>
   </footer>
+
+  <!-- Script for Mobile -->
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+
 </body>
 </html>
