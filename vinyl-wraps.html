@@ -17,7 +17,7 @@
       <div class="nav-center" id="navMenu">
         <ul>
           <li><a href="index.html">HOME</a></li>
-          <li><a href="book-online.html">BOOK ONLINE</a></li>
+          <!-- <li><a href="book-online.html">BOOK ONLINE</a></li> -->
           <li class="dropdown">
             <a href="#">SERVICES ▾</a>
             <ul class="dropdown-menu">
@@ -84,14 +84,17 @@
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px;">
         <div class="gallery">
           <div class="gallery-item">
+            <span class="fullscreen-icon">&#128470;</span>
             <img src="Truck_Angle2.jpg" alt="Wrapped Car 1" style="width: 400px; border-radius: 10px;">
             <div class="img-caption">Mustang – Satin Black Wrap</div>
           </div>
           <div class="gallery-item">
+            <span class="fullscreen-icon">&#128470;</span>
             <img src="Truck_Angle2.jpg" alt="Wrapped Car 2" style="width: 400px; border-radius: 10px;">
             <div class="img-caption">Charger – Gloss Nardo Gray</div>
           </div>
           <div class="gallery-item">
+            <span class="fullscreen-icon">&#128470;</span>
             <img src="Truck_Angle2.jpg" alt="Wrapped Car 3" style="width: 400px; border-radius: 10px;">
             <div class="img-caption">Tesla Model 3 – Color Flip Wrap</div>
           </div>
@@ -130,15 +133,10 @@
     </section>
   </footer>
 
-  <!-- Script for Mobile -->
-  <script>
-    const toggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
+  <div class="fullscreen-overlay" id="fullscreenOverlay"> 
+    <img id="fullscreenImage" src="" alt="Zoomed Image">
+  </div>
+  <script src="fullscreen.js" type="module"></script>
 
-    toggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-  </script>
-  
 </body>
 </html>

@@ -19,7 +19,7 @@
       <div class="nav-center" id="navMenu">
         <ul>
           <li><a href="index.html">HOME</a></li>
-          <li><a href="book-online.html">BOOK ONLINE</a></li>
+          <!-- <li><a href="book-online.html">BOOK ONLINE</a></li> -->
           <li class="dropdown">
             <a href="#">SERVICES ▾</a>
             <ul class="dropdown-menu">
@@ -37,29 +37,40 @@
   </nav>
   <header>
     <div class="header-background"></div>
-    <h2>ADD TITLE HERE</h2>
-    <p>ADD SUPER COOL MINI TITLE HERE</p>
+    <h2>Our Craftsmanship in Action</h2>
+    <p>See why car owners across Southern California trust us with their vehicles!</p>
   </header>
 
   <section class="section-intro">
-    <h2>Our Work</h2>
+        <div class="about-description">
+          <h2>Projects</h2>
+            <p>
+              Every project we take on is more than just a job — it’s a reflection of our values: excellence, integrity, and passion.
+              From custom vinyl wraps to advanced paint protection film and high-end window tinting, we treat each vehicle with
+              the same care and attention we’d give our own.
+            </p>
+        </div>
   </section>
 
   <!-- Static image gallery -->
   <div class="gallery">
     <div class="gallery-item">
+      <span class="fullscreen-icon">&#128470;</span>
       <img src="Truck_Angle1.jpg" alt="Custom Wrap 1" />
       <div class="img-caption">2022 Ford F-150</div>
     </div>
     <div class="gallery-item">
+      <span class="fullscreen-icon">&#128470;</span>
       <img src="Truck_Angle1.jpg" alt="Window Tint 2" />
       <div class="img-caption">2020 Chevy Silverado</div>
     </div>
     <div class="gallery-item">
+      <span class="fullscreen-icon">&#128470;</span>
       <img src="Truck_Angle1.jpg" alt="PPF Install" />
       <div class="img-caption">2018 Dodge Ram 1500</div>
     </div>
     <div class="gallery-item">
+      <span class="fullscreen-icon">&#128470;</span>
       <img src="Truck_Angle1.jpg" alt="Wrap Finish" />
       <div class="img-caption">2023 Toyota Tundra</div>
     </div>
@@ -67,16 +78,21 @@
     <!-- Before and After Comparison -->
     <div class="before-after-pair">
       <div class="before-after-item">
+        <span class="fullscreen-icon">&#128470;</span>
         <img src="Truck_Angle1.jpg" alt="Before Wrap">
         <div class="img-caption">Before</div>
       </div>
       <div class="before-after-item">
+        <span class="fullscreen-icon">&#128470;</span>
         <img src="Truck_Angle2.jpg" alt="After Wrap">
         <div class="img-caption">After</div>
       </div>
     </div>
   </div>
 
+  <div class="fullscreen-overlay" id="fullscreenOverlay"> 
+    <img id="fullscreenImage" src="" alt="Zoomed Image">
+  </div>
 
     <!-- Carousel section -->
   <div class="carousel-wrapper">
@@ -126,82 +142,9 @@
     </section>
   </footer>
 
+    <div class="fullscreen-overlay" id="fullscreenOverlay"> 
+      <img id="fullscreenImage" src="" alt="Zoomed Image">
+    </div>
+    <script src="fullscreen.js" type="module"></script>
 </body>
-  <script>
-    const toggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
-
-    toggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const carousel = document.querySelector('.carousel');
-      const slides = document.querySelectorAll('.carousel-slide');
-      const indicatorsContainer = document.querySelector('.carousel-indicators');
-      let currentIndex = 0;
-      let autoPlayInterval;
-  
-      // Create dot indicators
-      slides.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if (index === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => {
-          currentIndex = index;
-          updateCarousel();
-          resetAutoplay();
-        });
-        indicatorsContainer.appendChild(dot);
-      });
-  
-      const dots = document.querySelectorAll('.dot');
-  
-      function updateCarousel() {
-        const offset = -currentIndex * 100;
-        carousel.style.transform = `translateX(${offset}%)`;
-  
-        // Update active dot
-        dots.forEach((dot, i) => {
-          dot.classList.toggle('active', i === currentIndex);
-        });
-      }
-  
-      function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateCarousel();
-      }
-  
-      function prevSlide() {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        updateCarousel();
-      }
-  
-      document.querySelector('.carousel-btn.left').addEventListener('click', () => {
-        prevSlide();
-        resetAutoplay();
-      });
-  
-      document.querySelector('.carousel-btn.right').addEventListener('click', () => {
-        nextSlide();
-        resetAutoplay();
-      });
-  
-      function startAutoplay() {
-        autoPlayInterval = setInterval(nextSlide, 5000); // 5 seconds
-      }
-  
-      function resetAutoplay() {
-        clearInterval(autoPlayInterval);
-        startAutoplay();
-      }
-  
-      updateCarousel(); // initialize
-      startAutoplay();  // autoplay starts
-
-      window.onerror = function (message, source, lineno, colno, error) {
-        alert(`Error: ${message} at ${source}:${lineno}:${colno}`);
-      };
-    });
-  </script>
 </html>
