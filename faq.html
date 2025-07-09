@@ -111,13 +111,7 @@
     </section>
   </footer>
 
-  <script>
-    const toggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
-
-    toggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
+  <script src="fullscreen.js" type="module">
     
     document.querySelectorAll(".faq-question").forEach(q => {
       q.addEventListener("click", () => {

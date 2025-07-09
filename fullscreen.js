@@ -9,17 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
             toggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
-    }
 
-    // Close menu if user clicks outside of it
-    document.addEventListener('click', function (event) {
-    const isClickInsideMenu = navMenu.contains(event.target);
-    const isClickOnToggle = toggle.contains(event.target);
+        // Close menu if user clicks outside of it
+        document.addEventListener('click', function (event) {
+            const isClickInsideMenu = navMenu.contains(event.target);
+            const isClickOnToggle = toggle.contains(event.target);
 
-    if (!isClickInsideMenu && !isClickOnToggle) {
-        navMenu.classList.remove('active');
+            // Only attempt to close if the menu is active
+            if (navMenu.classList.contains('active') && !isClickInsideMenu && !isClickOnToggle) {
+                navMenu.classList.remove('active');
+            }
+        });
     }
-    });
 
     // Carousel Script
     if (carousel){
