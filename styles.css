@@ -722,7 +722,7 @@ button {
     position: fixed;
     top: 0;
     right: 0;
-    width: 50%; /* or 100% if you want full screen */
+    width: 100%; /* or 100% if you want full screen */
     height: auto;
     background-color: black;
     transform: translateX(100%);
