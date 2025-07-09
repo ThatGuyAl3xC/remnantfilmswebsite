@@ -90,20 +90,20 @@ nav ul li a:hover {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Shift it back by half its width */
   background-color: rgba(0, 0, 0, 0.95);
   list-style: none;
   padding: 10px 0;
   display: none;
   flex-direction: column;
-  min-width: 200px;
+  min-width: 250px;
   z-index: 1000;
-  border-radius: 5px;
+  text-align: center;
 }
 
 .dropdown-menu li {
   width: 100%;
-  text-align: left;
 }
 
 .dropdown-menu li a {
@@ -719,23 +719,34 @@ button {
   }
 
   .nav-center {
-    display: none;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%; /* or 100% if you want full screen */
+    height: auto;
     background-color: black;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
   }
  
   .nav-center ul {
     flex-direction: column;
     text-align: center;
+    transition: padding 0.4s ease;
   }
 
-  .nav-center ul li {
+  .nav-center ul li:not(:last-child) {
     padding: 10px 0;
     border-bottom: 1px solid gold;
   }
 
   .nav-center.active {
-    display: block;
+    transform: translateX(0);
   }
     .split-section {
     flex-direction: column;
