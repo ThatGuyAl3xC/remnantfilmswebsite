@@ -2,17 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: inherit;
+  font-size: large;
 }
 body {
   margin: 0;
   background-color: #000;
   color: #f0f0f0;
-  font-family: 'Montserrat', sans-serif;
-}
-
-h1, h2, h3{
   font-family: 'Playfair Display', serif;
+}
+h3{
+  margin-top: 30px;
+  color: gold;
+  font-size: 1.5rem;
 }
 header {
   position: relative;
@@ -366,7 +368,7 @@ a.service-card::before {
   max-width: 600px;
 }
 .service-subtitle {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: gold;
   margin-bottom: 5px;
   margin-left: 5px;
@@ -424,9 +426,9 @@ a.service-card::before {
   clip-path: polygon(0% 0, 100% 0, 90% 100%, 0% 100%);
 }
 .split-section .text-container p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  line-height: 1.6;
+  line-height: 1.8;
   color: #f0f0f0;
   max-width: 500px;
 }
