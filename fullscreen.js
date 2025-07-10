@@ -106,6 +106,21 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // FAQ page animations
+    document.querySelectorAll(".faq-question").forEach(q => {
+      q.addEventListener("click", () => {
+        const item = q.parentElement;
+        item.classList.toggle("active");
+  
+        // Optionally collapse others
+        document.querySelectorAll(".faq-item").forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove("active");
+          }
+        });
+      });
+    });
+
     window.onerror = function (message, source, lineno, colno, error) {
     alert(`Error: ${message} at ${source}:${lineno}:${colno}`);
     };
