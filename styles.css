@@ -575,6 +575,9 @@ footer {
   padding: 15px 20px;
   font-weight: bold;
   font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .faq-answer {
@@ -597,8 +600,8 @@ footer {
 
 .faq-question::after {
   content: " ▼";
-  float: right;
   color: gold;
+  font-size: 1.2rem;
 }
 .booking-section {
   max-width: 800px;
