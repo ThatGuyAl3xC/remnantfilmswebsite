@@ -703,6 +703,15 @@ button {
   cursor: pointer;
 }
 
+.social-icons a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-icons a:visited{
+  color: inherit;
+}
+
 /* ----- Mobile ----- */
 
 .nav-toggle {
