@@ -30,7 +30,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('Car_Images/Truck_Angle1.webp') no-repeat center center/cover;
+  background: var(--bg-image) no-repeat center center/cover;
   opacity: 0.5;
   z-index: 1;
 }
@@ -209,7 +209,7 @@ section {
 }
 
 .gallery img {
-  max-width: 400px;
+  max-width: 600px;
   border-radius: 12px;
   box-shadow: 0 0 10px gold;
   transition: transform 0.3s ease;
@@ -220,18 +220,21 @@ section {
 }
 
 .gallery-item {
+  width: clamp(280px, 30vw, 400px); /* Responsive width */
+  aspect-ratio: 4 / 3; /* Keeps images from stretching */
   position: relative;
-  display: inline-block;
   border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px gold;
 }
 
-
 .gallery-item img {
-  display: block;
-  aspect-ratio: 4 / 3;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  display: block;
   border-radius: 12px;
+  transition: transform 0.3s ease;
 }
 .fullscreen-icon {
   position: absolute;
