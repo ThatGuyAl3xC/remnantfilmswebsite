@@ -788,6 +788,11 @@ button {
     transition: transform 0.2s ease, color 0.2s ease;
   }
 
+  .service-description {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
   .nav-center ul li a:hover {
     transform: scale(1.05);
   }
