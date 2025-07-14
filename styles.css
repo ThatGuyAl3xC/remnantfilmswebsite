@@ -220,7 +220,7 @@ section {
 }
 
 .gallery-item {
-  width: clamp(280px, 30vw, 400px); /* Responsive width */
+  width: clamp(350px, 30vw, 400px); /* Responsive width */
   aspect-ratio: 4 / 3; /* Keeps images from stretching */
   position: relative;
   border-radius: 12px;
@@ -311,6 +311,7 @@ section {
 }
 
 .before-after-item {
+  width: clamp(350px, 30vw, 400px);
   position: relative;
   max-width: 400px;
   border-radius: 12px;
