@@ -423,7 +423,7 @@ a.service-card::before {
 .split-section .video-container {
   flex: 1;
   position: relative;
-  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0, 100% 0, 100% 100%, 0% 100%);
   overflow: hidden;
 }
 .split-section video {
