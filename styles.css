@@ -859,11 +859,13 @@ button {
   .split-section .text-container {
     clip-path: none;
     width: 100%;
-    height: auto;
   }
 
   .split-section .video-container {
     order: 1;
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
   }
 
   .split-section .text-container {
@@ -872,8 +874,11 @@ button {
   }
 
   .split-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
   }
 
