@@ -251,6 +251,17 @@ section {
   letter-spacing: 0.5px;
 }
 
+.gold-link{
+  color: gold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.gold-link:hover {
+  color: brown;
+  transform: scale(1.05);
+}
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
