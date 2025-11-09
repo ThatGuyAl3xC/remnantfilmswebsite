@@ -256,7 +256,7 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 0 20px 60px;
+  padding: 60px 20px 60px;
 }
 
 .gallery img {
