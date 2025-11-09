@@ -10,7 +10,9 @@
   <meta property="og:image" content="https://remnantfilmsandcustoms.com/Icons_and_Misc/logo2.jpg">
   <meta property="og:url" content="https://remnantfilmsandcustoms.com/">
   <meta name="keywords" content="car wraps Downey CA, window tinting Downey, paint protection film Downey, PPF Los Angeles, vinyl wraps Orange County" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- Preload hero image and fonts -->
+  <link rel="preload" as="image" href="Car_Images/Truck_Angle1.webp">
+  <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" crossorigin>
   <link rel="stylesheet" href="styles.css" />
   <link rel="canonical" href="https://remnantfilmsandcustoms.com/" />
   <script type="application/ld+json">
@@ -112,7 +114,10 @@
   </header> -->
 
   <header>
-  <img src="Car_Images/Truck_Angle1.webp" alt="Custom Truck Car Wrap in Downey, CA by Remnant Films & Customs" class="header-img" />
+  <img src="Car_Images/Truck_Angle1.webp" 
+       alt="Custom Truck Car Wrap in Downey, CA by Remnant Films & Customs" 
+       class="header-img" 
+       loading="lazy"/>
   <div class="overlay"></div>
   <h2>Remnant Films & Customs</h2>
   <p>Where Luxury Meets Protection</p>
@@ -130,7 +135,7 @@
       <p>Transform and protect your vehicle with Remnant Films & Customs — trusted by drivers across Downey, Orange County, and Los Angeles for expert-quality wraps, tint, and PPF.</p>
     <div class="service-container">
       <a href="window-tinting.html" class="service-card">
-          <img src="Car_Images/TintCarBlue.webp" alt="Blue Car Window Tinting Service in Downey, CA">
+          <img src="Car_Images/TintCarBlue.webp" alt="Blue Car Window Tinting Service in Downey, CA" loading="lazy">
           <div class="service-content">
             <div class="service-subtitle">Remnant F&amp;C</div>
             <div class="service-title">Window Tinting</div>
@@ -140,7 +145,7 @@
           </div>
       </a>
       <a href="paint-protection.html" class="service-card">
-          <img src="Car_Images/PPFCar.jpg" alt="Paint Protection Film Installation in Downey, CA">
+          <img src="Car_Images/PPFCar.jpg" alt="Paint Protection Film Installation in Downey, CA" loading="lazy">
           <div class="service-content">
             <div class="service-subtitle">Remnant F&amp;C</div>
             <div class="service-title">Paint Protection Film (PPF)</div>
@@ -150,7 +155,7 @@
           </div>
       </a>
       <a href="vinyl-wraps.html" class="service-card">
-        <img src="Car_Images/Truck_Angle2.webp" alt="Vinyl Wraps">
+        <img src="Car_Images/Truck_Angle2.webp" alt="Vinyl Wraps" loading="lazy">
         <div class="service-content">
           <div class="service-subtitle">Remnant F&amp;C</div>
           <div class="service-title">Vinyl Wraps</div>
